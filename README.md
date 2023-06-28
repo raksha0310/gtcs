@@ -1,1 +1,1 @@
-# gtcs
+# Georgia Tech Computer Science classes
