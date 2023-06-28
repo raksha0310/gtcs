@@ -472,16 +472,3 @@ if __name__ == '__main__':
     main.show()
     exit_code = app.exec_()
     sys.exit(exit_code)
-Graded
-PE03 Extra Credit (Optional)
-4 Days, 22 Hours Late
-Student
-Rakshanda Khan
-Total Points
-2 / 3 pts
-
-Autograder Score
-0.0 / 0.0
-Question 2
-Extra Credit (3pts max)
-2 / 3 pts
