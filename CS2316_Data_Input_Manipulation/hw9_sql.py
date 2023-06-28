@@ -123,7 +123,40 @@ def main():
     # print(">>> query0(cursor)")
     # pprint(query0(cursor, 10005))
 
+def create_cursor(host_name, user_name, pw, db_name):
+    '''Do NOT alter this function'''
+    try:
+        connection = pymysql.connect(host = host_name, user = user_name, password = pw, db = db_name, \
+                                    charset = "utf8mb4", cursorclass = pymysql.cursors.Cursor)
+        cursor = connection.cursor()
+        return cursor
+    except Exception as e:
+        print(e)
+        print(f"Couldn't log in to MySQL server using this password: {pw}.\n")
 
+def query11(cursor, emp_no, birth_date, first_name, last_name, gender, hire_date):
+    '''Fill in the query'''
+    query = 'INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s);'
+    '''DO NOT CHANGE THE CODE BELOW'''
+    cursor.execute(query, (emp_no, birth_date, first_name, last_name, gender, hire_date))
+    result = cursor.fetchall()
+    return result
+
+def query12(cursor):
+    '''Fill in the query'''
+    query = 'UPDATE dept_emp SET to_date = CAST(\'2021-07-01\' AS DATETIME) WHERE YEAR(to_date)= 9999;'
+    '''DO NOT CHANGE THE CODE BELOW'''
+    cursor.execute(query)
+    result = cursor.fetchall()
+    return result
+
+def query13(cursor):
+    '''Fill in the query'''
+    query = 'DELETE FROM dept_emp WHERE dept_no > \'d005\';'
+    '''DO NOT CHANGE THE CODE BELOW'''
+    cursor.execute(query)
+    result = cursor.fetchall()
+    return result
 
 if __name__ == '__main__':
     main()
