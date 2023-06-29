@@ -1,1 +1,1 @@
-# Georgia Tech Computer Science/Coding class homeworks + projects
+# Georgia Tech Computer Science & Data Science class homeworks + projects
